@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- divinectorweb.com -->
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery"> 
+        <div class="image">
+          <img src="port/port1.jpg" alt="Image 1" onclick="openModal('port/port1.jpg', 'Web Design')">
+        </div>
+        <div class="image">
+          <img src="port/port2.jpg" alt="Image 2" onclick="openModal('port/port2.jpg', 'Graphics Design')">
+        </div>
+        <div class="image">
+          <img src="port/port3.jpg" alt="Image 3" onclick="openModal('port/port3.jpg', 'UI UX Design')">
+        </div>
+        <div class="image">
+          <img src="port/port4.jpg" alt="Image 4" onclick="openModal('port/port4.jpg', 'Photography')">
+        </div>
+        <div class="image">
+          <img src="port/port5.jpg" alt="Image 5" onclick="openModal('port/port5.jpg', 'Web Development')">
+        </div>
+        <div class="image">
+          <img src="port/port6.jpg" alt="Image 6" onclick="openModal('port/port6.jpg', 'Digital Marketing')">
+        </div>
+      </div>
+      
+      <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Modal Image">
+        <div id="caption" class="caption"></div>
+      </div>
+
+
+      <script>
+        function openModal(imageSrc, imageAlt) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-image');
+        const captionText = document.getElementById('caption');
+
+        modal.style.display = 'block';
+        modalImg.src = imageSrc;
+        modalImg.alt = imageAlt;
+        captionText.innerHTML = imageAlt;
+        }
+
+        function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+        }
+
+      </script>
+</body>
+</html>
