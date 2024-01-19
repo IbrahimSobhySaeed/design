@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <title>Full screen Search box bootstrap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-default navbar-inverse">
+  <div class="container">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">DigiCom</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">portfolio</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#search">Search</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   
+   
+   <div id="search">
+    <button type="button" class="close">X</button>
+    <form>
+        <input type="search" value="" placeholder="Your Query Here ...." />
+        <button type="submit" class="btn">Search</button>
+    </form>
+</div>
+   
+   
+   <div class="content">
+       <div class="thing">
+           <h2>digital agency</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ducimus accusantium voluptates nesciunt, perspiciatis, corporis.</p>
+       <a href="#">Learn More</a>
+       </div>
+   </div>
+    </header>
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+    $('a[href="#search"]').on('click', function(event) {
+        event.preventDefault();
+        $('#search').addClass('open');
+        $('#search > form > input[type="search"]').focus();
+    });
+    
+    $('#search, #search button.close').on('click', function(event) {
+        if (event.target == this || event.target.className == 'close') {
+            $(this).removeClass('open');
+        }
+    });
+    
+    
+    
+});
+    </script>
+</body>
+</html>
